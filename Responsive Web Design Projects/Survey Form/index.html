@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/surveyform.css">
+    <script src="js/surveyform.js"></script>
+</head>
+<body>
+    <h1 id="title"> Survey Form</h1>
+    <div id="formout">
+    <p id="description">
+        Let us know what you think about our product.
+    </p>
+    <form id="survey-form">
+        
+        <div class="rowTab">
+            <div class="labels">
+                <label for="name-label">*Name:</label>
+            </div>
+            <div class="rightTab">
+                <input type="text" class="input-field" id="name" placeholder="Enter your name" required pattern="[a-zA-Z\s]+">
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="email-label">*Email:</label>
+            </div>
+            <div class="rightTab">
+                <input type="text" class="input-field" id="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="number-label">*Phone Number:</label>
+            </div>
+            <div class="rightTab">
+                <input type="text" class="input-field" id="number" placeholder="Enter your phone number" required pattern="^\d{3}-\d{3}-\d{4}$">
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="usage">How often do you use our product?</label>
+            </div>
+            <div class="rightTab">
+                <select id="dropdown" name="usage" class="dropdown">
+                    <option disabled selected value>
+                        Select an option
+                    </option>
+                    <option value="once">
+                        Once a Week
+                    </option>
+                    <option value="thrce">
+                        Thrice a Week
+                    </option>
+                    <option value="Everyday">
+                        Everyday
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="userRec">*How likely is that you would recommend this product to a friend?</label>
+            </div>
+            <div class="rightTab">
+                <ul style="list-style:none;">
+                    <li class="radio">
+                        <label><input name="radiobuttons" value="1" type="radio" class="userRec">Definitely</label>
+                    </li>
+                    <li class="radio">
+                        <label><input name="radiobuttons" value="2" type="radio" class="userRec">Maybe</label>
+                    </li>
+                    <li class="radio">
+                        <label><input name="radiobuttons" value="3" type="radio" class="userRec">Not Sure</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="improve">Things that should be improved in the future<br>(Check all that apply):</label>
+            </div>
+            <div class="rightTab">
+                <ul id="improve" style="list-style: none;">
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="1" class="userRec">New Features</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="2" class="userRec">Accessibility</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="3" class="userRec">Pricing</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="4" class="userRec">Performance</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="5" class="userRec">Storage</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="6" class="userRec">Quality</label>
+                    </li>
+                    <li class="checkbox">
+                        <label><input type="checkbox" name="prefer" value="7" class="userRec">Durability</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rowTab">
+            <div class="labels">
+                <label for="comments">Any Comments or Suggestions?</label>
+            </div>
+            <div class="rightTab">
+                <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here"></textarea>
+            </div>
+        </div>
+
+        <button id="submit" name="submit" onclick="submitForm()">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
